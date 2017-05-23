@@ -10,7 +10,8 @@
 		"aws-sdk-react-native-core": "./aws-sdk-react-native/aws-sdk-react-native-core-0.0.2-with-awscore-framework.tgz",
 		"react": "16.0.0-alpha.6",
 		"react-native": "0.44.0",
-		"react-native-facebook-login": "^1.5.0"
+		"react-native-facebook-login": "^1.5.0",
+		"react-native-google-signin": "^0.10.0"
 	},
 	"devDependencies": {
 		"babel-jest": "20.0.3",
