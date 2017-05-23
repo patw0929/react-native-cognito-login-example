@@ -1,4 +1,4 @@
-package com.cognitologinexample;
+package me.patw.cognitologinexample;
 
 import android.app.Application;
 
