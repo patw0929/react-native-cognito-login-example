@@ -1,0 +1,3 @@
+rootProject.name = 'CognitoLoginExample'
+
+include ':app'
