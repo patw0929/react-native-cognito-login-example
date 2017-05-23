@@ -1,5 +1,6 @@
 import React, { PropTypes, Component } from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import * as AuthUtils from './utils/auth';
 
 const styles = StyleSheet.create({
   containerStyle: {
@@ -51,20 +52,28 @@ const styles = StyleSheet.create({
 });
 
 class App extends Component {
+  componentDidMount() {
+    AuthUtils.init();
+  }
+
   handleLogin = (type) => {
-    console.log('login', type);
+    if (type === 'facebook') {
+      AuthUtils.loginFB();
+    } else if (type === 'google') {
+      AuthUtils.loginGoogle();
+    }
   }
 
   render() {
     return (
       <View style={styles.containerStyle}>
-        <Text style={styles.headingText}>React-Native Cognito Example</Text>
+        <Text style={styles.headingText}>React-Native Cognito Login Example</Text>
 
         <TouchableOpacity onPress={() => this.handleLogin('facebook')} style={styles.facebookLoginButton}>
           <Text style={styles.facebookLoginButtonText}>Login with Facebook</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity onPress={() => handleLogin('google')} style={styles.googleLoginButton}>
+        <TouchableOpacity onPress={() => this.handleLogin('google')} style={styles.googleLoginButton}>
           <Text style={styles.googleLoginButtonText}>Login with Google</Text>
         </TouchableOpacity>
       </View>
