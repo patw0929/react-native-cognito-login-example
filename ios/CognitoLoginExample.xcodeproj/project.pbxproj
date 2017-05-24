@@ -40,6 +40,11 @@
 		48EB2D091ED52BFB000E471B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D061ED52BFB000E471B /* FBSDKCoreKit.framework */; };
 		48EB2D0A1ED52BFB000E471B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D071ED52BFB000E471B /* FBSDKLoginKit.framework */; };
 		48EB2D0B1ED52BFB000E471B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D081ED52BFB000E471B /* FBSDKShareKit.framework */; };
+		48EB2D3A1ED53065000E471B /* libRNGoogleSignin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D391ED52FE2000E471B /* libRNGoogleSignin.a */; };
+		48EB2D3C1ED5306C000E471B /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D3B1ED5306C000E471B /* AddressBook.framework */; };
+		48EB2D3E1ED53076000E471B /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D3D1ED53076000E471B /* SafariServices.framework */; };
+		48EB2D401ED5307D000E471B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D3F1ED5307D000E471B /* SystemConfiguration.framework */; };
+		48EB2D421ED53087000E471B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D411ED53087000E471B /* libz.tbd */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		616ED890E70D4644896E2A44 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38519D5AF4D844E5BC3D59E3 /* libCore.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -302,6 +307,10 @@
 		48EB2D071ED52BFB000E471B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
 		48EB2D081ED52BFB000E471B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		48EB2D191ED52FE1000E471B /* RNGoogleSignin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RNGoogleSignin.xcodeproj; path = "../node_modules/react-native-google-signin/ios/RNGoogleSignin.xcodeproj"; sourceTree = "<group>"; };
+		48EB2D3B1ED5306C000E471B /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		48EB2D3D1ED53076000E471B /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
+		48EB2D3F1ED5307D000E471B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		48EB2D411ED53087000E471B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -320,6 +329,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EB2D421ED53087000E471B /* libz.tbd in Frameworks */,
+				48EB2D401ED5307D000E471B /* SystemConfiguration.framework in Frameworks */,
+				48EB2D3E1ED53076000E471B /* SafariServices.framework in Frameworks */,
+				48EB2D3C1ED5306C000E471B /* AddressBook.framework in Frameworks */,
+				48EB2D3A1ED53065000E471B /* libRNGoogleSignin.a in Frameworks */,
 				48EB2CDC1ED5291A000E471B /* libRCTFBLogin.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				48EB2D0B1ED52BFB000E471B /* FBSDKShareKit.framework in Frameworks */,
@@ -490,6 +504,10 @@
 		48EB2D051ED52BAC000E471B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48EB2D411ED53087000E471B /* libz.tbd */,
+				48EB2D3F1ED5307D000E471B /* SystemConfiguration.framework */,
+				48EB2D3D1ED53076000E471B /* SafariServices.framework */,
+				48EB2D3B1ED5306C000E471B /* AddressBook.framework */,
 				48EB2D061ED52BFB000E471B /* FBSDKCoreKit.framework */,
 				48EB2D071ED52BFB000E471B /* FBSDKLoginKit.framework */,
 				48EB2D081ED52BFB000E471B /* FBSDKShareKit.framework */,
