@@ -32,6 +32,26 @@
 				<string>fb1906059066086548</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.googleusercontent.apps.469382905985-0ho9t3lc0g6ig7l69du9971vijdgv6fn</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.469382905985-0ho9t3lc0g6ig7l69du9971vijdgv6fn</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>org.reactjs.native.example.CognitoLoginExample</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>org.reactjs.native.example.CognitoLoginExample</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
