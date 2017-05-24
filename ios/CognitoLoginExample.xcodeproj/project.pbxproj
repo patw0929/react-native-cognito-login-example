@@ -37,6 +37,9 @@
 		48EB2C921ED52615000E471B /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2C911ED52615000E471B /* AWSCore.framework */; };
 		48EB2C931ED52615000E471B /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2C911ED52615000E471B /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		48EB2CDC1ED5291A000E471B /* libRCTFBLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2CC51ED52848000E471B /* libRCTFBLogin.a */; };
+		48EB2D091ED52BFB000E471B /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D061ED52BFB000E471B /* FBSDKCoreKit.framework */; };
+		48EB2D0A1ED52BFB000E471B /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D071ED52BFB000E471B /* FBSDKLoginKit.framework */; };
+		48EB2D0B1ED52BFB000E471B /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D081ED52BFB000E471B /* FBSDKShareKit.framework */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		616ED890E70D4644896E2A44 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38519D5AF4D844E5BC3D59E3 /* libCore.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -288,6 +291,9 @@
 		38519D5AF4D844E5BC3D59E3 /* libCore.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libCore.a; sourceTree = "<group>"; };
 		48EB2C911ED52615000E471B /* AWSCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AWSCore.framework; path = "../node_modules/aws-sdk-react-native-core/ios/Frameworks/AWSCore.framework"; sourceTree = "<group>"; };
 		48EB2CBC1ED52848000E471B /* RCTFBLogin.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTFBLogin.xcodeproj; path = "../node_modules/react-native-facebook-login/RCTFBLogin.xcodeproj"; sourceTree = "<group>"; };
+		48EB2D061ED52BFB000E471B /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKCoreKit.framework"; sourceTree = "<group>"; };
+		48EB2D071ED52BFB000E471B /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKLoginKit.framework"; sourceTree = "<group>"; };
+		48EB2D081ED52BFB000E471B /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = "../node_modules/react-native-facebook-login/FacebookSDK/FBSDKShareKit.framework"; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -308,6 +314,7 @@
 			files = (
 				48EB2CDC1ED5291A000E471B /* libRCTFBLogin.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
+				48EB2D0B1ED52BFB000E471B /* FBSDKShareKit.framework in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
 				00C302E71ABCBA2D00DB3ED1 /* libRCTGeolocation.a in Frameworks */,
@@ -316,9 +323,11 @@
 				00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */,
 				48EB2C921ED52615000E471B /* AWSCore.framework in Frameworks */,
 				139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */,
+				48EB2D091ED52BFB000E471B /* FBSDKCoreKit.framework in Frameworks */,
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				48EB2D0A1ED52BFB000E471B /* FBSDKLoginKit.framework in Frameworks */,
 				616ED890E70D4644896E2A44 /* libCore.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +479,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		48EB2D051ED52BAC000E471B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48EB2D061ED52BFB000E471B /* FBSDKCoreKit.framework */,
+				48EB2D071ED52BFB000E471B /* FBSDKLoginKit.framework */,
+				48EB2D081ED52BFB000E471B /* FBSDKShareKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +539,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				48EB2D051ED52BAC000E471B /* Frameworks */,
 				48EB2C911ED52615000E471B /* AWSCore.framework */,
 				13B07FAE1A68108700A75B9A /* CognitoLoginExample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -1109,7 +1129,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Frameworks",
+					"$(SRCROOT)/../node_modules/react-native-facebook-login/FacebookSDK",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Core/**",
@@ -1131,7 +1154,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Frameworks",
+					"$(SRCROOT)/../node_modules/react-native-facebook-login/FacebookSDK",
+				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Core/**",
