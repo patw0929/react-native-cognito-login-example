@@ -5,7 +5,7 @@ import { GoogleSignin } from 'react-native-google-signin';
 const IDENTITY_POOL_ID = 'ap-northeast-1:4e86b831-da7f-47d5-8382-3d800cd28a25';
 const REGION = 'ap-northeast-1';
 const GOOGLE_SIGNIN_IOS_CLIENT_ID = '469382905985-0ho9t3lc0g6ig7l69du9971vijdgv6fn.apps.googleusercontent.com';
-const GOOGLE_SIGNIN_WEBCLIENT_ID = '841323845806-so8dm9ue5bhc419etsk7f9eg0tadff3h.apps.googleusercontent.com';
+const GOOGLE_SIGNIN_WEBCLIENT_ID = '469382905985-sdi5a3gqtk1ikce7cb2f0u6h9ashculq.apps.googleusercontent.com';
 
 let identityId = null;
 let currentLoginMethod;
