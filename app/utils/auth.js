@@ -171,8 +171,8 @@ function init() {
   };
 
   AWSCognitoCredentials.initWithOptions({
-    REGION,
-    IDENTITY_POOL_ID,
+    region: REGION,
+    identity_pool_id: IDENTITY_POOL_ID,
   });
 
   getCredentials()
