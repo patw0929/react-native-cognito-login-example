@@ -36,6 +36,7 @@
 		2DCD954D1E0B4F2C00145EB5 /* CognitoLoginExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* CognitoLoginExampleTests.m */; };
 		48EB2C921ED52615000E471B /* AWSCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2C911ED52615000E471B /* AWSCore.framework */; };
 		48EB2C931ED52615000E471B /* AWSCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2C911ED52615000E471B /* AWSCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48EB2CDC1ED5291A000E471B /* libRCTFBLogin.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2CC51ED52848000E471B /* libRCTFBLogin.a */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		616ED890E70D4644896E2A44 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38519D5AF4D844E5BC3D59E3 /* libCore.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -305,6 +306,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EB2CDC1ED5291A000E471B /* libRCTFBLogin.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
