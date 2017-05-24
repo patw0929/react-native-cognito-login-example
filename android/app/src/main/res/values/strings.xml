@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CognitoLoginExample</string>
+    <string name="fb_app_id">1906059066086548</string>
+    <string name="fb_login_protocol_scheme">fb1906059066086548</string>
 </resources>
