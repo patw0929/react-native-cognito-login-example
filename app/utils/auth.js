@@ -22,10 +22,7 @@ let openIdTokenPromise = new Promise(resolve => {
   openIdResolve = resolve;
 });
 
-console.log(AWSCognitoCredentials);
-
 function getCredentials() {
-  console.log(GOOGLE_SIGNIN_IOS_CLIENT_ID);
   return new Promise((resolve, reject) => {
     FBLoginManager.getCredentials((err, data) => {
       if (
@@ -142,7 +139,6 @@ async function getOpenIdToken(accessToken) {
 
 async function onLoginInvoked(isLoggingIn, accessToken) {
   if (isLoggingIn) {
-    // this.setState({ accessToken });
     global_supplyLogin = true;
     global_accessToken = accessToken;
     const map = {};
@@ -150,7 +146,13 @@ async function onLoginInvoked(isLoggingIn, accessToken) {
     map[providers[currentLoginMethod]] = accessToken;
     AWSCognitoCredentials.setLogins(map); // ignored for iOS
     identityId = await getIdentityId();
-    getOpenIdToken(accessToken);
+    const token = await getOpenIdToken(accessToken);
+
+    if (token) {
+      console.log('open id token: ', currentLoginMethod, token);
+    } else if (accessToken) {
+      console.log('access token', currentLoginMethod, accessToken);
+    }
   } else {
     global_supplyLogin = false;
     global_accessToken = '';
@@ -177,7 +179,6 @@ function init() {
 
   getCredentials()
     .then(token => {
-      console.log(token);
       onLoginInvoked(true, token);
     })
     .catch(message => {
