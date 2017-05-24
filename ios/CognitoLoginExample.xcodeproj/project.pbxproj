@@ -46,6 +46,12 @@
 		48EB2D401ED5307D000E471B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D3F1ED5307D000E471B /* SystemConfiguration.framework */; };
 		48EB2D421ED53087000E471B /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D411ED53087000E471B /* libz.tbd */; };
 		48EB2D441ED531C9000E471B /* GoogleSdk in Resources */ = {isa = PBXBuildFile; fileRef = 48EB2D431ED531C8000E471B /* GoogleSdk */; };
+		48EB2D4B1ED5351A000E471B /* GoogleAppUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D451ED5351A000E471B /* GoogleAppUtilities.framework */; };
+		48EB2D4C1ED5351A000E471B /* GoogleAuthUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D461ED5351A000E471B /* GoogleAuthUtilities.framework */; };
+		48EB2D4D1ED5351A000E471B /* GoogleNetworkingUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D471ED5351A000E471B /* GoogleNetworkingUtilities.framework */; };
+		48EB2D4E1ED5351A000E471B /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D481ED5351A000E471B /* GoogleSignIn.framework */; };
+		48EB2D4F1ED5351A000E471B /* GoogleSymbolUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D491ED5351A000E471B /* GoogleSymbolUtilities.framework */; };
+		48EB2D501ED5351A000E471B /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48EB2D4A1ED5351A000E471B /* GoogleUtilities.framework */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		616ED890E70D4644896E2A44 /* libCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 38519D5AF4D844E5BC3D59E3 /* libCore.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
@@ -313,6 +319,12 @@
 		48EB2D3F1ED5307D000E471B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		48EB2D411ED53087000E471B /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		48EB2D431ED531C8000E471B /* GoogleSdk */ = {isa = PBXFileReference; lastKnownFileType = folder; path = GoogleSdk; sourceTree = "<group>"; };
+		48EB2D451ED5351A000E471B /* GoogleAppUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAppUtilities.framework; path = GoogleSdk/GoogleAppUtilities.framework; sourceTree = "<group>"; };
+		48EB2D461ED5351A000E471B /* GoogleAuthUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleAuthUtilities.framework; path = GoogleSdk/GoogleAuthUtilities.framework; sourceTree = "<group>"; };
+		48EB2D471ED5351A000E471B /* GoogleNetworkingUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleNetworkingUtilities.framework; path = GoogleSdk/GoogleNetworkingUtilities.framework; sourceTree = "<group>"; };
+		48EB2D481ED5351A000E471B /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSignIn.framework; path = GoogleSdk/GoogleSignIn.framework; sourceTree = "<group>"; };
+		48EB2D491ED5351A000E471B /* GoogleSymbolUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleSymbolUtilities.framework; path = GoogleSdk/GoogleSymbolUtilities.framework; sourceTree = "<group>"; };
+		48EB2D4A1ED5351A000E471B /* GoogleUtilities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleUtilities.framework; path = GoogleSdk/GoogleUtilities.framework; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
@@ -331,6 +343,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48EB2D4B1ED5351A000E471B /* GoogleAppUtilities.framework in Frameworks */,
+				48EB2D4C1ED5351A000E471B /* GoogleAuthUtilities.framework in Frameworks */,
+				48EB2D4D1ED5351A000E471B /* GoogleNetworkingUtilities.framework in Frameworks */,
+				48EB2D4E1ED5351A000E471B /* GoogleSignIn.framework in Frameworks */,
+				48EB2D4F1ED5351A000E471B /* GoogleSymbolUtilities.framework in Frameworks */,
+				48EB2D501ED5351A000E471B /* GoogleUtilities.framework in Frameworks */,
 				48EB2D421ED53087000E471B /* libz.tbd in Frameworks */,
 				48EB2D401ED5307D000E471B /* SystemConfiguration.framework in Frameworks */,
 				48EB2D3E1ED53076000E471B /* SafariServices.framework in Frameworks */,
@@ -506,6 +524,12 @@
 		48EB2D051ED52BAC000E471B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				48EB2D451ED5351A000E471B /* GoogleAppUtilities.framework */,
+				48EB2D461ED5351A000E471B /* GoogleAuthUtilities.framework */,
+				48EB2D471ED5351A000E471B /* GoogleNetworkingUtilities.framework */,
+				48EB2D481ED5351A000E471B /* GoogleSignIn.framework */,
+				48EB2D491ED5351A000E471B /* GoogleSymbolUtilities.framework */,
+				48EB2D4A1ED5351A000E471B /* GoogleUtilities.framework */,
 				48EB2D411ED53087000E471B /* libz.tbd */,
 				48EB2D3F1ED5307D000E471B /* SystemConfiguration.framework */,
 				48EB2D3D1ED53076000E471B /* SafariServices.framework */,
@@ -1182,6 +1206,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Frameworks",
 					"$(SRCROOT)/../node_modules/react-native-facebook-login/FacebookSDK",
+					"$(PROJECT_DIR)/GoogleSdk",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1207,6 +1232,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SRCROOT)/../node_modules/aws-sdk-react-native-core/ios/Frameworks",
 					"$(SRCROOT)/../node_modules/react-native-facebook-login/FacebookSDK",
+					"$(PROJECT_DIR)/GoogleSdk",
 				);
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
