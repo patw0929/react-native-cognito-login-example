@@ -1,3 +1,5 @@
 rootProject.name = 'CognitoLoginExample'
+include ':aws-sdk-react-native-core'
+project(':aws-sdk-react-native-core').projectDir = new File(rootProject.projectDir, '../node_modules/aws-sdk-react-native-core/android')
 
 include ':app'
