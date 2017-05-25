@@ -148,11 +148,7 @@ async function onLoginInvoked(isLoggingIn, accessToken) {
     identityId = await getIdentityId();
     const token = await getOpenIdToken(accessToken);
 
-    if (token) {
-      console.log('open id token: ', currentLoginMethod, token);
-    } else if (accessToken) {
-      console.log('access token', currentLoginMethod, accessToken);
-    }
+    console.log('open id token: ', currentLoginMethod, token);
   } else {
     global_supplyLogin = false;
     global_accessToken = '';
