@@ -42,6 +42,7 @@ function getCredentials() {
         GoogleSignin.configure({
           iosClientId: GOOGLE_SIGNIN_IOS_CLIENT_ID,
           webClientId: GOOGLE_SIGNIN_WEBCLIENT_ID,
+          scopes: ['profile', 'email'],
         }).then(() => {
           GoogleSignin.currentUserAsync()
             .then(user => {
