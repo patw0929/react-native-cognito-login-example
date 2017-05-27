@@ -9,7 +9,7 @@ React-Native Cognito Login Example App
 * [aws-sdk-react-native](https://github.com/awslabs/aws-sdk-react-native) (Custom packed version)
 * [react-native-facebook-login](https://github.com/magus/react-native-facebook-login) 1.5.0
 * [react-native-google-signin](https://github.com/devfd/react-native-google-signin) 0.10.0
-* [react-native-loading-spinner-overlay] 0.5.0
+* [react-native-loading-spinner-overlay](https://github.com/joinspontaneous/react-native-loading-spinner-overlay) 0.5.0
 
 ## About login
 
