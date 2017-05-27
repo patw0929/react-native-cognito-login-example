@@ -3,6 +3,10 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import Spinner from 'react-native-loading-spinner-overlay';
 import * as AuthUtils from './utils/auth';
 
+if (console) {
+  console.disableYellowBox = true;
+}
+
 const styles = StyleSheet.create({
   containerStyle: {
     flex: 1,
