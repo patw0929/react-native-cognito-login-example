@@ -4,10 +4,10 @@ project(':react-native-google-signin').projectDir = new File(rootProject.project
 include ':aws-sdk-react-native-core'
 project(':aws-sdk-react-native-core').projectDir = new File(rootProject.projectDir, '../node_modules/aws-sdk-react-native-core/android')
 
-include ':app'
-
 include ':react-native-facebook-login'
 project(':react-native-facebook-login').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-facebook-login/android')
 
 include ':react-native-google-signin', ':app'
 project(':react-native-google-signin').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-google-signin/android')
+
+include ':app'
