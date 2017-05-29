@@ -139,6 +139,7 @@ class App extends Component {
 
     this.setState({
       loggedIn: false,
+      isLoading: false,
       profile: {},
     });
   }
