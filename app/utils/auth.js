@@ -25,8 +25,8 @@ let openIdTokenPromise = new Promise(resolve => {
   openIdResolve = resolve;
 });
 
-function getCredentials() {
-  return new Promise((resolve, reject) => {
+const fbGetCredential = () => {
+  return new Promise(resolve => {
     FBLoginManager.getCredentials((err, data) => {
       if (
         data &&
@@ -36,33 +36,38 @@ function getCredentials() {
       ) {
         resolve(data.credentials.token);
       } else {
-        reject(err || data.message);
+        console.log('fbGetCredential fail', data, err);
       }
     });
+  });
+};
 
+const googleGetCredential = () => {
+  return new Promise(resolve => {
     GoogleSignin.hasPlayServices({ autoResolve: true })
-      .then(() => {
+      .then(() =>
         GoogleSignin.configure({
-          iosClientId: GOOGLE_SIGNIN_IOS_CLIENT_ID,
-          webClientId: GOOGLE_SIGNIN_WEBCLIENT_ID,
-        }).then(() => {
-          GoogleSignin.currentUserAsync()
-            .then(user => {
-              if (user && user.idToken) {
-                resolve(user.idToken);
-              }
-            })
-            .catch(err => {
-              console.log(err);
-              reject(err);
-            });
-        });
+          iosClientId: Config.GOOGLE_SIGNIN_IOS_CLIENT_ID,
+          webClientId: Config.GOOGLE_SIGNIN_WEBCLIENT_ID,
+        })
+      )
+      .then(() => GoogleSignin.currentUserAsync())
+      .then(user => {
+        console.log('user', user);
+
+        if (user && user.idToken) {
+          resolve(user.idToken);
+        } else {
+          console.log('user error');
+        }
       })
       .catch(err => {
-        console.log('Play services error', err.code, err.message);
+        console.log(err);
       });
   });
-}
+};
+
+const getCredentials = () => Promise.race([fbGetCredential(), googleGetCredential()]);
 
 // Should after onLoginInvoked
 async function getIdentityId() {
@@ -179,13 +184,9 @@ function init() {
     identity_pool_id: IDENTITY_POOL_ID,
   });
 
-  getCredentials()
-    .then(token => {
-      onLoginInvoked(true, token);
-    })
-    .catch(message => {
-      console.log('message', message);
-    });
+  getCredentials().then(token => {
+    onLoginInvoked(true, token);
+  });
 }
 
 function loginFB() {
