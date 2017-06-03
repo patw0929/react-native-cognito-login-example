@@ -34,6 +34,7 @@ const fbGetCredential = () => {
         typeof data.credentials.token === 'string' &&
         data.credentials.token.length > 0
       ) {
+        currentLoginMethod = 'graph.facebook.com';
         resolve(data.credentials.token);
       } else {
         console.log('fbGetCredential fail', data, err);
@@ -56,6 +57,7 @@ const googleGetCredential = () => {
         console.log('user', user);
 
         if (user && user.idToken) {
+          currentLoginMethod = 'accounts.google.com';
           resolve(user.idToken);
         } else {
           console.log('user error');
