@@ -48,8 +48,8 @@ const googleGetCredential = () => {
     GoogleSignin.hasPlayServices({ autoResolve: true })
       .then(() =>
         GoogleSignin.configure({
-          iosClientId: Config.GOOGLE_SIGNIN_IOS_CLIENT_ID,
-          webClientId: Config.GOOGLE_SIGNIN_WEBCLIENT_ID,
+          iosClientId: GOOGLE_SIGNIN_IOS_CLIENT_ID,
+          webClientId: GOOGLE_SIGNIN_WEBCLIENT_ID,
         })
       )
       .then(() => GoogleSignin.currentUserAsync())
