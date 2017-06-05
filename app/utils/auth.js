@@ -14,6 +14,7 @@ let identityId = null;
 let currentLoginMethod;
 let global_supplyLogin = false;
 let global_accessToken = '';
+let global_openIdToken = '';
 
 const providers = {
   'graph.facebook.com': 'FacebookProvider',
@@ -35,7 +36,9 @@ const fbGetCredential = () => {
         data.credentials.token.length > 0
       ) {
         currentLoginMethod = 'graph.facebook.com';
-        resolve(data.credentials.token);
+        resolve({
+          accessToken: data.credentials.token,
+        });
       } else {
         console.log('fbGetCredential fail', data, err);
       }
@@ -56,9 +59,12 @@ const googleGetCredential = () => {
       .then(user => {
         console.log('user', user);
 
-        if (user && user.idToken) {
+        if (user && user.idToken && user.accessToken) {
           currentLoginMethod = 'accounts.google.com';
-          resolve(user.idToken);
+          resolve({
+            idToken: user.idToken,
+            accessToken: user.accessToken,
+          });
         } else {
           console.log('user error');
         }
@@ -93,6 +99,7 @@ function cleanLoginStatus() {
   identityId = null;
   global_supplyLogin = false;
   global_accessToken = '';
+  global_openIdToken = '';
 
   openIdTokenPromise = new Promise(resolve => {
     openIdResolve = resolve;
@@ -111,11 +118,11 @@ function logout() {
   });
 }
 
-async function getOpenIdToken(accessToken) {
+async function getOpenIdToken(token) {
   const payload = {
     IdentityId: identityId,
     Logins: {
-      [currentLoginMethod]: accessToken,
+      [currentLoginMethod]: token,
     },
   };
 
@@ -147,16 +154,17 @@ async function getOpenIdToken(accessToken) {
   }
 }
 
-async function onLoginInvoked(isLoggingIn, accessToken) {
+async function onLoginInvoked(isLoggingIn, accessToken, idToken) {
   if (isLoggingIn) {
     global_supplyLogin = true;
     global_accessToken = accessToken;
+    global_openIdToken = idToken;
     const map = {};
 
-    map[providers[currentLoginMethod]] = accessToken;
+    map[providers[currentLoginMethod]] = idToken || accessToken;
     AWSCognitoCredentials.setLogins(map); // ignored for iOS
     identityId = await getIdentityId();
-    const token = await getOpenIdToken(accessToken);
+    const token = await getOpenIdToken(idToken || accessToken);
 
     return {
       accessToken: global_accessToken,
@@ -165,6 +173,7 @@ async function onLoginInvoked(isLoggingIn, accessToken) {
   } else {
     global_supplyLogin = false;
     global_accessToken = '';
+    global_openIdToken = '';
   }
 }
 
@@ -173,7 +182,7 @@ function init() {
     if (global_supplyLogin) {
       const map = {};
 
-      map[providers[currentLoginMethod]] = global_accessToken;
+      map[providers[currentLoginMethod]] = global_openIdToken || global_accessToken;
 
       return map;
     }
@@ -186,8 +195,8 @@ function init() {
     identity_pool_id: IDENTITY_POOL_ID,
   });
 
-  getCredentials().then(token => {
-    onLoginInvoked(true, token);
+  getCredentials().then(tokens => {
+    onLoginInvoked(true, tokens.accessToken, tokens.idToken);
   });
 }
 
@@ -219,7 +228,7 @@ async function loginGoogle() {
 
   if (user) {
     currentLoginMethod = 'accounts.google.com';
-    return await onLoginInvoked(true, user.idToken);
+    return await onLoginInvoked(true, user.accessToken, user.idToken);
   }
 
   return;
