@@ -18,3 +18,15 @@ Based on [Amazon Cognito](https://aws.amazon.com/cognito/) to implement the logi
 I also used the [Amazon Lambda](https://aws.amazon.com/lambda/) & [Amazon API Gateway](https://aws.amazon.com/api-gateway/) to make a serverless API service, to complete the register/retrieve member data flow.
 
 The lambda script repo is at [here](https://github.com/patw0929/cognito-login-example-api-aws-lambda).
+
+## Intro
+
+Please refer to this article (Chinese):
+
+[使用 REACT NATIVE 與 AMAZON COGNITO 實作 GOOGLE & FACEBOOK 登入的功能](http://blog.patw.me/archives/1372/using-react-native-and-amazon-cognito-to-develop-google-facebook-login-feature-in-android-ios-app/)
+
+## Related project
+
+Lambda API (for user registration):
+
+[https://github.com/patw0929/cognito-login-example-api-aws-lambda](https://github.com/patw0929/cognito-login-example-api-aws-lambda)
