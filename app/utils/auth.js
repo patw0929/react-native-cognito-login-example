@@ -236,7 +236,7 @@ async function loginGoogle() {
 
 async function refreshToken() {
   const token = await getCredentials();
-  const openIdToken = await getOpenIdToken(token);
+  const openIdToken = await getOpenIdToken(token.idToken || token.accessToken);
 
   openIdTokenPromise = Promise.resolve(openIdToken);
 
